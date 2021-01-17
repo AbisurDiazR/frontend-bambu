@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "frontend-bambu": {
+      "hosting": {
+        "frontend-bambu": [
+          "frontend-bambu"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "frontend-bambu"
+  }
+}

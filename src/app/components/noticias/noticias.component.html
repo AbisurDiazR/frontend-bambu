@@ -1,0 +1,48 @@
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto">
+                <select name="codigoPais" id="codigoPais" class="form-select region"
+                    [(ngModel)]="parametros.codigoPais">
+                    <option *ngFor="let pais of listaPaises" value="{{pais.code}}">{{pais.nombre}}</option>
+                </select>
+            </div>
+
+            <div class="col-md-auto">
+                <select name="categoriaNoticia" id="categoriaNoticia" class="form-select categoria"
+                    [(ngModel)]="parametros.categoriaNoticia">
+                    <option *ngFor="let categoria of listaCategorias" value="{{categoria}}">{{categoria}}</option>
+                </select>
+            </div>
+            <div class="col-md-auto">
+                <button class="btn btn-primary" (click)="irNoticias()">Ir a</button>
+            </div>
+            <div class="col-md-auto">
+                <button class="btn btn-danger" (click)="logout()">Cerrar sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="wrapper">
+        <div class="home">
+            <div class="row pack">
+                <div class="col-md-4 card-noticia" *ngFor="let noticia of noticias">
+                    <a target="_blank" href="{{noticia.url}}">
+                        <img src="{{noticia.urlToImage}}" alt="">
+                        <div class="titulo-noticia">
+                            {{noticia.title}}
+                        </div>
+                        <div class="fecha">
+                            {{noticia.publishedAt | date:'short':'GMT-6'}}
+                        </div>
+                        <div class="descripcion">
+                            {{noticia.description}}
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

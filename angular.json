@@ -117,8 +117,16 @@
               "devServerTarget": "frontend-bambu:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "frontend-bambu"
+    }
+  },
+  "defaultProject": "frontend-bambu",
+  "cli": {
+    "analytics": "59351905-eef9-471b-aae5-d29f532ae9cc"
+  }
 }
